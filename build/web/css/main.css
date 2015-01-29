@@ -1,0 +1,59 @@
+* {
+    -moz-box-sizing:    border-box;   /* Firefox 1, probably can drop this */
+    -webkit-box-sizing: border-box;    /* Safari 3-4, also probably droppable */
+    box-sizing:        border-box;   /* Everything else*/ 
+}
+
+body, html {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	font-size: 17px;
+    padding: 0;
+    margin: 0;
+}
+
+.addr{
+    margin-left: 10px;
+}
+
+a, a:visited {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.nav-pills {
+	color: #555;
+}
+
+.nav {
+	color: #555;
+}
+
+.form-group{
+	width: 40%;
+}
+
+p {
+    padding: 10px 0 10px;
+}
+
+.page-header {
+    margin: 20px 0 20px;
+}
+
+.table {
+    width: 70%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: left;
+}
+
+.table-striped {
+    width: 70%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+td {
+    text-align: left;
+}

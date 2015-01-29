@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/eObserve">
+    
+<Resource name="jdbc/eobserve" auth="Container" type="javax.sql.DataSource"
+               maxActive="100" maxIdle="30" maxWait="10000"
+               username="lamprini" password="12345" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://localhost:3306/eobserve"/>
+
+</Context>
