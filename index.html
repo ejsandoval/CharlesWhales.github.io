@@ -537,10 +537,10 @@ function agrandar_imagen(ano){
 	var w = 0;
 	var x = 0;
 	var y = 0;
-	var a= 0;
-	var b= 0;
-	var c= 0;
-	var d= 0;
+	var h2= 0;
+	var w2= 0;
+	var x2= 0;
+	var y2= 0;
 	switch(opcion) {
     case "hidroelectrica":
 		w = hidro[ano].width;
@@ -596,63 +596,62 @@ function agrandar_imagen(ano){
 		y = diesel[ano].widthc;
 	break;
 	case "hidroelectrica2":
-        	a = hidro[ano].alto;
-		b = hidro[ano].width;
-		c = hidro[ano].altoc;
-		d = hidro[ano].widthc;
+        	h2 = hidro[ano].alto;
+		w2 = hidro[ano].width;
+		x2 = hidro[ano].altoc;
+		y2 = hidro[ano].widthc;
         break;
     case "carbon2":
-        	a = carbon[ano].width;
-		b = carbon[ano].alto;
-		c = carbon[ano].altoc;
-		d = carbon[ano].widthc;
+        	h2 = carbon[ano].width;
+		w2 = carbon[ano].alto;
+		x2 = carbon[ano].altoc;
+		y2 = carbon[ano].widthc;
 		
         break;
     case "nuclear2":
-		a = nuclear[ano].width;
-		b = nuclear[ano].alto;
-		c = nuclear[ano].altoc;
-		d = nuclear[ano].widthc;
+		h2 = nuclear[ano].width;
+		w2 = nuclear[ano].alto;
+		x2 = nuclear[ano].altoc;
+		y2 = nuclear[ano].widthc;
 	break;
 	case "solar2":
-		a = solar[ano].width;
-		b = solar[ano].alto;
-		c = solar[ano].altoc;
-		d = solar[ano].widthc;
+		h2 = solar[ano].width;
+		w2 = solar[ano].alto;
+		x2 = solar[ano].altoc;
+		y2 = solar[ano].widthc;
 	break;
 	case "biomasa2":
        
-		a = biomasa[ano].alto;
-		b = biomasa[ano].widith;
-		c = biomasa[ano].altoc;
-		d = biomasa[ano].widthc;
+		h2 = biomasa[ano].alto;
+		w2 = biomasa[ano].widith;
+		x2 = biomasa[ano].altoc;
+		y2 = biomasa[ano].widthc;
         break;
     case "gas2":
        
-		a = gas[ano].alto;
-		b = gas[ano].widith;
-		c = gas[ano].altoc;
-		d = gas[ano].widthc;
+		h2 = gas[ano].alto;
+		w2 = gas[ano].widith;
+		x2 = gas[ano].altoc;
+		y2 = gas[ano].widthc;
         break;
     case "eolica2":
-		a = eolica[ano].width;
-		b = eolica[ano].alto;
-		c = eolica[ano].altoc;
-		d = nuclear[ano].widthc;
+		h2 = eolica[ano].width;
+		w2 = eolica[ano].alto;
+		x2 = eolica[ano].altoc;
+		y2 = nuclear[ano].widthc;
 	break;
 	case "geotermica2":
-		a = geotermica[ano].width;
-		b = geotermica[ano].alto;
-		c = geotermica[ano].altoc;
-		d = geotermica[ano].widthc;
+		h2 = geotermica[ano].width;
+		w2 = geotermica[ano].alto;
+		x2 = geotermica[ano].altoc;
+		y2 = geotermica[ano].widthc;
 	break;
 	case "diesel2":
-		a = diesel[ano].width;
-		b = diesel[ano].alto;
-		c = diesel[ano].altoc;
-		d = diesel[ano].widthc;
+		h2 = diesel[ano].width;
+		w2 = diesel[ano].alto;
+		x2 = diesel[ano].altoc;
+		y2 = diesel[ano].widthc;
 	};
-	alert ("a: "a+";b: "+b)
 	$("#foto1").animate({
 		left: '30px',
 		height: h+"px",
@@ -665,13 +664,13 @@ function agrandar_imagen(ano){
 	});
 	$("#foto3").animate({
 		left: '30px',
-		height: a+"px",
-		width: b+"px"
+		height: h2+"px",
+		width: w2+"px"
 	});
 	$("#foto4").animate({
 		left: '30px',
-		height: c+"px",
-		width: d+"px"
+		height: x2+"px",
+		width: y2+"px"
 	});
 };
 var eolica = {
@@ -883,8 +882,8 @@ $(document).ready(function(){
         </select>
     </div>
     
-    <img id="foto1" src="../big-money-icon.png"  style="float:left"/>
-    <img id="foto2" src="../ih_icon.png"  style="float:left"/>
+    <img id="foto1" src="../big-money-icon.png" height=100px width=100px style="float:left"/>
+    <img id="foto2" src="../ih_icon.png" height=100px width=100px style="float:left"/>
 </div>
 <div style="clear:left">
 </div>
@@ -902,8 +901,8 @@ $(document).ready(function(){
           <option value="solar2">Solar</option>
         </select>
     </div>
-    <img id="foto3" src="../big-money-icon.png"  style="float:left"/>
-    <img id="foto4" src="../ih_icon.png"  style="float:left"/>
+    <img id="foto3" src="../big-money-icon.png" height=100px width=100px style="float:left"/>
+    <img id="foto4" src="../ih_icon.png" height=100px width=100px style="float:left"/>
 </div>
 <div>
     <button onClick="agrandar_imagen(2015)">2015</button>
