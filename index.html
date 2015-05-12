@@ -567,13 +567,13 @@ function agrandar_imagen(ano){
 		y = solar[ano].widthc;
 	case "biomasa":
 		h = biomasa[ano].alto;
-		w = biomasa[ano].widith;
+		w = biomasa[ano].width;
 		x = biomasa[ano].altoc;
 		y = biomasa[ano].widthc;
         break;
         case "gas":
 		w = gas[ano].alto;
-		h = gas[ano].widith;
+		h = gas[ano].width;
 		x = gas[ano].altoc;
 		y = gas[ano].widthc;
         break;
@@ -596,61 +596,61 @@ function agrandar_imagen(ano){
 		y = diesel[ano].widthc;
 	break;
 	case "hidroelectrica2":
-        	h2 = hidro[ano].alto;
-		w2 = hidro[ano].width;
-		x2 = hidro[ano].altoc;
-		z = hidro[ano].widthc;
+        	h2 = hidro2[ano].alto;
+		w2 = hidro2[ano].width;
+		x2 = hidro2[ano].altoc;
+		z = hidro2[ano].widthc;
         break;
     case "carbon2":
-        	h2 = carbon[ano].width;
-		w2 = carbon[ano].alto;
-		x2 = carbon[ano].altoc;
-		z = carbon[ano].widthc;
+        	h2 = carbon2[ano].width;
+		w2 = carbon2[ano].alto;
+		x2 = carbon2[ano].altoc;
+		z = carbon2[ano].widthc;
 		
         break;
     case "nuclear2":
-		h2 = nuclear[ano].width;
-		w2 = nuclear[ano].alto;
-		x2 = nuclear[ano].altoc;
-		z = nuclear[ano].widthc;
+		h2 = nuclear2[ano].width;
+		w2 = nuclear2[ano].alto;
+		x2 = nuclear2[ano].altoc;
+		z = nuclear2[ano].widthc;
 	break;
 	case "solar2":
-		h2 = solar[ano].width;
-		w2 = solar[ano].alto;
-		x2 = solar[ano].altoc;
-		z = solar[ano].widthc;
+		h2 = solar2[ano].width;
+		w2 = solar2[ano].alto;
+		x2 = solar2[ano].altoc;
+		z = solar2[ano].widthc;
 	break;
 	case "biomasa2":
        
-		h2 = biomasa[ano].alto;
-		w2 = biomasa[ano].widith;
-		x2 = biomasa[ano].altoc;
-		z = biomasa[ano].widthc;
+		h2 = biomasa2[ano].alto;
+		w2 = biomasa2[ano].width;
+		x2 = biomasa2[ano].altoc;
+		z = biomasa2[ano].widthc;
         break;
     case "gas2":
        
-		h2 = gas[ano].alto;
-		w2 = gas[ano].widith;
-		x2 = gas[ano].altoc;
-		z = gas[ano].widthc;
+		h2 = gas2[ano].alto;
+		w2 = gas2[ano].width;
+		x2 = gas2[ano].altoc;
+		z = gas2[ano].widthc;
         break;
     case "eolica2":
-		h2 = eolica[ano].width;
-		w2 = eolica[ano].alto;
-		x2 = eolica[ano].altoc;
-		z = nuclear[ano].widthc;
+		h2 = eolica2[ano].width;
+		w2 = eolica2[ano].alto;
+		x2 = eolica2[ano].altoc;
+		z = eolica2[ano].widthc;
 	break;
 	case "geotermica2":
-		h2 = geotermica[ano].width;
-		w2 = geotermica[ano].alto;
-		x2 = geotermica[ano].altoc;
-		z = geotermica[ano].widthc;
+		h2 = geotermica2[ano].width;
+		w2 = geotermica2[ano].alto;
+		x2 = geotermica2[ano].altoc;
+		z = geotermica2[ano].widthc;
 	break;
 	case "diesel2":
-		h2 = diesel[ano].width;
-		w2 = diesel[ano].alto;
-		x2 = diesel[ano].altoc;
-		z = diesel[ano].widthc;
+		h2 = diesel2[ano].width;
+		w2 = diesel2[ano].alto;
+		x2 = diesel2[ano].altoc;
+		z = diesel2[ano].widthc;
 	};
 	alert(z)
 	$("#foto1").animate({
@@ -860,6 +860,192 @@ var solar = {
 		alto2: 600
 	},
 };
+var eolica2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var gas2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var geotermica2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var biomasa2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var diesel2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var hidro2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var carbon2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var nuclear2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+};
+var solar2 = {
+	2015: {
+		width: 350,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		width2: 500,
+		alto2: 600
+	},
+}:
 $(document).ready(function(){
     $("button").click(function(){
 		$("#opciones").css("visibility", "visible");
