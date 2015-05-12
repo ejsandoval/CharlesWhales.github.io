@@ -571,7 +571,7 @@ function agrandar_imagen(ano){
 		x = biomasa[ano].altoc;
 		y = biomasa[ano].widthc;
         break;
-    case "gas":
+        case "gas":
 		w = gas[ano].alto;
 		h = gas[ano].widith;
 		x = gas[ano].altoc;
@@ -652,6 +652,7 @@ function agrandar_imagen(ano){
 		x2 = diesel[ano].altoc;
 		z = diesel[ano].widthc;
 	};
+	alert(z)
 	$("#foto1").animate({
 		left: '30px',
 		height: h+"px",
