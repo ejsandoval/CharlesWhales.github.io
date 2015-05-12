@@ -537,10 +537,10 @@ function agrandar_imagen(ano){
 	var w = 0;
 	var x = 0;
 	var y = 0;
-	var h2= 0;
-	var w2= 0;
-	var x2= 0;
-	var y2= 0;
+	var a= 0;
+	var b= 0;
+	var c= 0;
+	var d= 0;
 	switch(opcion) {
     case "hidroelectrica":
         h = hidro[ano].width;
@@ -585,7 +585,7 @@ function agrandar_imagen(ano){
 		w = eolica[ano].width;
 		h = eolica[ano].alto;
 		x = eolica[ano].altoc;
-		y = nuclear[ano].widthc;
+		y = eolica[ano].widthc;
 	break;
 	case "geotermica":
 		w = geotermica[ano].width;
@@ -600,62 +600,63 @@ function agrandar_imagen(ano){
 		y = diesel[ano].widthc;
 	break;
 	case "hidroelectrica2":
-        h2 = hidro[ano].width;
-		w2 = hidro[ano].alto;
-		x2 = solar[ano].altoc;
-		y2 = solar[ano].widthc;
+        	a = hidro[ano].alto;
+		b = hidro[ano].width;
+		c = hidro[ano].altoc;
+		d = hidro[ano].widthc;
         break;
     case "carbon2":
-        h2 = carbon[ano].width;
-		w2 = carbon[ano].alto;
-		x2 = solar[ano].altoc;
-		y2 = solar[ano].widthc;
+        	a = carbon[ano].width;
+		b = carbon[ano].alto;
+		c = carbon[ano].altoc;
+		d = carbon[ano].widthc;
+		
         break;
     case "nuclear2":
-		h2 = nuclear[ano].width;
-		w2 = nuclear[ano].alto;
-		x2 = solar[ano].altoc;
-		y2 = solar[ano].widthc;
+		a = nuclear[ano].width;
+		b = nuclear[ano].alto;
+		c = nuclear[ano].altoc;
+		d = nuclear[ano].widthc;
 	break;
 	case "solar2":
-		h2 = solar[ano].width;
-		w2 = solar[ano].alto;
-		x2 = solar[ano].altoc;
-		y2 = solar[ano].widthc;
+		a = solar[ano].width;
+		b = solar[ano].alto;
+		c = solar[ano].altoc;
+		d = solar[ano].widthc;
 	break;
 	case "biomasa2":
-        h = hidro[ano].width;
-		h2 = biomasa[ano].alto;
-		w2 = biomasa[ano].widith;
-		x2 = biomasa[ano].altoc;
-		y2 = biomasa[ano].widthc;
+       
+		a = biomasa[ano].alto;
+		b = biomasa[ano].widith;
+		c = biomasa[ano].altoc;
+		d = biomasa[ano].widthc;
         break;
     case "gas2":
-        h = carbon[ano].width;
-		h2 = gas[ano].alto;
-		w2 = gas[ano].widith;
-		x2 = gas[ano].altoc;
-		y2 = gas[ano].widthc;
+       
+		a = gas[ano].alto;
+		b = gas[ano].widith;
+		c = gas[ano].altoc;
+		d = gas[ano].widthc;
         break;
     case "eolica2":
-		h2 = eolica[ano].width;
-		w2 = eolica[ano].alto;
-		x2 = eolica[ano].altoc;
-		y2 = nuclear[ano].widthc;
+		a = eolica[ano].width;
+		b = eolica[ano].alto;
+		c = eolica[ano].altoc;
+		d = nuclear[ano].widthc;
 	break;
 	case "geotermica2":
-		w2 = geotermica[ano].width;
-		h2 = geotermica[ano].alto;
-		x2 = geotermica[ano].altoc;
-		y2 = geotermica[ano].widthc;
+		a = geotermica[ano].width;
+		b = geotermica[ano].alto;
+		c = geotermica[ano].altoc;
+		d = geotermica[ano].widthc;
 	break;
 	case "diesel2":
-		w2 = diesel[ano].width;
-		h2 = diesel[ano].alto;
-		x2 = diesel[ano].altoc;
-		y2 = diesel[ano].widthc;
+		a = diesel[ano].width;
+		b = diesel[ano].alto;
+		c = diesel[ano].altoc;
+		d = diesel[ano].widthc;
 	};
-	alert ("h2: "+h2+";w2: "+w2)
+	alert ("a: "a+";b: "+b)
 	$("#foto1").animate({
 		left: '30px',
 		height: h+"px",
@@ -668,13 +669,13 @@ function agrandar_imagen(ano){
 	});
 	$("#foto3").animate({
 		left: '30px',
-		height: h2+"px",
-		width: w2+"px"
+		height: a+"px",
+		width: b+"px"
 	});
 	$("#foto4").animate({
 		left: '30px',
-		height: x2+"px",
-		width: y2+"px"
+		height: c+"px",
+		width: d+"px"
 	});
 };
 var eolica = {
