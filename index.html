@@ -544,27 +544,60 @@ function agrandar_imagen(ano){
 	switch(opcion) {
     case "hidroelectrica":
         h = hidro[ano].width;
-		w = hidro[ano].alto;
+		w = hidro[ano].width;
+		h = hidro[ano].alto;
 		x = hidro[ano].altoc;
 		y = hidro[ano].widthc;
         break;
     case "carbon":
         h = carbon[ano].width;
-		w = carbon[ano].alto;
+		w = carbon[ano].width;
+		h = carbon[ano].alto;
 		x = carbon[ano].altoc;
 		y = carbon[ano].widthc;
         break;
     case "nuclear":
-		h = nuclear[ano].width;
-		w = nuclear[ano].alto;
+		w = nuclear[ano].width;
+		h = nuclear[ano].alto;
 		x = nuclear[ano].altoc;
 		y = nuclear[ano].widthc;
 	break;
 	case "solar":
-		h = solar[ano].width;
-		w = solar[ano].alto;
+		w = solar[ano].width;
+		h = solar[ano].alto;
 		x = solar[ano].altoc;
 		y = solar[ano].widthc;
+	case "biomasa":
+        h = hidro[ano].width;
+		h = biomasa[ano].alto;
+		w = biomasa[ano].widith;
+		x = biomasa[ano].altoc;
+		y = biomasa[ano].widthc;
+        break;
+    case "gas":
+        h = carbon[ano].width;
+		w = gas[ano].alto;
+		h = gas[ano].widith;
+		x = gas[ano].altoc;
+		y = gas[ano].widthc;
+        break;
+    case "eolica":
+		w = eolica[ano].width;
+		h = eolica[ano].alto;
+		x = eolica[ano].altoc;
+		y = nuclear[ano].widthc;
+	break;
+	case "geotermica":
+		w = geotermica[ano].width;
+		h = geotermica[ano].alto;
+		x = geotermica[ano].altoc;
+		y = geotermica[ano].widthc;
+	break;
+	case "diesel":
+		w = diesel[ano].width;
+		h = diesel[ano].alto;
+		x = diesel[ano].altoc;
+		y = diesel[ano].widthc;
 	break;
 	case "hidroelectrica2":
         h2 = hidro[ano].width;
@@ -590,6 +623,37 @@ function agrandar_imagen(ano){
 		x2 = solar[ano].altoc;
 		y2 = solar[ano].widthc;
 	break;
+	case "biomasa2":
+        h = hidro[ano].width;
+		h2 = biomasa[ano].alto;
+		w2 = biomasa[ano].widith;
+		x2 = biomasa[ano].altoc;
+		y2 = biomasa[ano].widthc;
+        break;
+    case "gas2":
+        h = carbon[ano].width;
+		h2 = gas[ano].alto;
+		w2 = gas[ano].widith;
+		x2 = gas[ano].altoc;
+		y2 = gas[ano].widthc;
+        break;
+    case "eolica2":
+		h2 = eolica[ano].width;
+		w2 = eolica[ano].alto;
+		x2 = eolica[ano].altoc;
+		y2 = nuclear[ano].widthc;
+	break;
+	case "geotermica2":
+		w2 = geotermica[ano].width;
+		h2 = geotermica[ano].alto;
+		x2 = geotermica[ano].altoc;
+		y2 = geotermica[ano].widthc;
+	break;
+	case "diesel2":
+		w2 = diesel[ano].width;
+		h2 = diesel[ano].alto;
+		x2 = diesel[ano].altoc;
+		y2 = diesel[ano].widthc;
 	};
 	alert ("h2: "+h2+";w2: "+w2)
 	$("#foto1").animate({
@@ -612,6 +676,111 @@ function agrandar_imagen(ano){
 		height: x2+"px",
 		width: y2+"px"
 	});
+};
+var eolica = {
+	2015: {
+		width: 350,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+};
+var gas = {
+	2015: {
+		width: 350,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+};
+var geotermica = {
+	2015: {
+		width: 350,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+};
+var biomasa = {
+	2015: {
+		width: 350,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+};
+var diesel = {
+	2015: {
+		width: 350,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+		
+	},
+	2030: {
+		width: 500,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
+	2050: {
+		width: 700,
+		alto: 400,
+		widthc: 500,
+		altoc: 600
+	},
 };
 var hidro = {
 	2015: {
@@ -705,10 +874,15 @@ $(document).ready(function(){
 <div>
     <div>
         <select id="opciones">
-          <option value="hidroelectrica">Hidroelectrica</option>
-          <option value="solar">Solar</option>
-          <option value="nuclear">Nuclear</option>
+          <option value="biomasa">Biomasa</option>
           <option value="carbon">Carbon</option>
+          <option value="diesel">Diesel</option>
+          <option value="eolica">Eolica</option>
+	  <option value="gas">Gas</option>
+          <option value="geotermica">Geotermica</option>
+	  <option value="hidroelectrica">Hidroelectrica</option>
+          <option value="nuclear">Nuclear</option>
+          <option value="solar">Solar</option>
         </select>
     </div>
     
@@ -718,10 +892,15 @@ $(document).ready(function(){
 <div style="clear:left">
     <div>
         <select id="opciones2">
-          <option value="hidroelectrica2">Hidroelectrica</option>
-          <option value="solar2">Solar</option>
-          <option value="nuclear2">Nuclear</option>
+          <option value="biomasa2">Biomasa</option>
           <option value="carbon2">Carbon</option>
+          <option value="diesel2">Diesel</option>
+          <option value="eolica2">Eolica</option>
+	  <option value="gas2">Gas</option>
+          <option value="geotermica2">Geotermica</option>
+	  <option value="hidroelectrica2">Hidroelectrica</option>
+          <option value="nuclear2">Nuclear</option>
+          <option value="solar2">Solar</option>
         </select>
     </div>
     <img id="foto3" src="../Pictures/Imagen1.png"/>
@@ -797,7 +976,28 @@ $(document).ready(function(){
 <span class="headline-list__body fc-item__headline">
 <span class="js-headline-text">Video game execution watched by 325,000 players</span></span>
 </a></h2>
-<title>Line Chart</title>
+<select id="opciones3">
+          <option value="biomasa3">Biomasa</option>
+          <option value="carbon3">Carbon</option>
+          <option value="diesel3">Diesel</option>
+          <option value="eolica3">Eolica</option>
+	  <option value="gas3">Gas</option>
+          <option value="geotermica3">Geotermica</option>
+	  <option value="hidroelectrica3">Hidroelectrica</option>
+          <option value="nuclear3">Nuclear</option>
+          <option value="solar3">Solar</option>
+        </select>
+<select id="opciones4">
+          <option value="biomasa4">Biomasa</option>
+          <option value="carbon4">Carbon</option>
+          <option value="diesel4">Diesel</option>
+          <option value="eolica4">Eolica</option>
+	  <option value="gas4">Gas</option>
+          <option value="geotermica4">Geotermica</option>
+	  <option value="hidroelectrica4">Hidroelectrica</option>
+          <option value="nuclear4">Nuclear</option>
+          <option value="solar4">Solar</option>
+        </select>
 		<script src="../Chart.js"></script>
 <div style="width:30%">
 			<div>
